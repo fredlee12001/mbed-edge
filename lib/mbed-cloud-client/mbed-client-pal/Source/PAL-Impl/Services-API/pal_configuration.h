@@ -89,10 +89,11 @@
 #ifndef PAL_SUPPORT_IP_V4
     #define PAL_SUPPORT_IP_V4                 true /* support IPV4 as default*/
 #endif
+/*
 #ifndef PAL_SUPPORT_IP_V6
-    #define PAL_SUPPORT_IP_V6                 true /* support IPV6 as default*/
+    #define PAL_SUPPORT_IP_V6                 true // support IPV6 as default*
 #endif
-
+*/
 //values for PAL_NET_DNS_IP_SUPPORT
 #define PAL_NET_DNS_ANY          0    /* if PAL_NET_DNS_IP_SUPPORT is set to PAL_NET_DNS_ANY pal_getAddressInfo will return the first available IPV4 or IPV6 address*/
 #define PAL_NET_DNS_IPV4_ONLY    2    /* if PAL_NET_DNS_IP_SUPPORT is set to PAL_NET_DNS_IPV4_ONLY pal_getAddressInfo will return the first available IPV4 address*/

@@ -1,3 +1,5 @@
+set_property(GLOBAL PROPERTY TARGET_SUPPORTS_SHARED_LIBS TRUE)
+
 file (GLOB SOURCES
   ./*.c
   ../common/apr_base64.c
@@ -15,7 +17,7 @@ endif ()
 
 include_directories (${CMAKE_CURRENT_LIST_DIR}/include)
 
-add_library (pt-client ${SOURCES})
+add_library (pt-client SHARED ${SOURCES})
 
 add_definitions(-DMBED_CONF_MBED_TRACE_ENABLE=1)
 
@@ -25,5 +27,5 @@ SET (CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -shared")
 if (TARGET_GROUP STREQUAL test)
   target_link_libraries (pt-client jansson rpc pal mbedTrace mbedCloudClient)
 else ()
-  target_link_libraries (pt-client event jansson websockets rpc pal mbedTrace mbedCloudClient)
+  target_link_libraries (pt-client "-Wl,--whole-archive" libservice "-Wl,--no-whole-archive" mbedCloudClient mbedTrace jansson websockets rpc event)
 endif()

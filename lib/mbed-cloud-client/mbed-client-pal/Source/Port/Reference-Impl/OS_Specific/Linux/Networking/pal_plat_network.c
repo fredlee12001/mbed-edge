@@ -643,8 +643,17 @@ palStatus_t pal_plat_socket(palSocketDomain_t domain, palSocketType_t type, bool
     PAL_ASSERT_STATIC(AF_INET == PAL_AF_INET);
     PAL_ASSERT_STATIC(AF_INET6 == PAL_AF_INET6);
     PAL_ASSERT_STATIC(AF_UNSPEC == PAL_AF_UNSPEC);
+
+/*The value mismatch has been found during OpenWrt 15.05.1*/
+#if 0
     PAL_ASSERT_STATIC(SOCK_DGRAM == (unsigned int)PAL_SOCK_DGRAM);
     PAL_ASSERT_STATIC(SOCK_STREAM == (unsigned int)PAL_SOCK_STREAM);
+#else
+    if(type == PAL_SOCK_DGRAM)
+        type = SOCK_DGRAM;
+    else if(type == PAL_SOCK_STREAM)
+        type = SOCK_STREAM;
+#endif
 
     if (nonBlockingSocket)
     {

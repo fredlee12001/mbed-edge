@@ -1,0 +1,116 @@
+---- pt_client_initialize_trace_api Matches (0 in 0 files) ----
+---- ns_list.h Matches (28 in 27 files) ----
+Client_config.h (include\pt-example):#include "ns_list.h"
+Edge_server.c (edge-core):#include "ns_list.h"
+Event.c (lib\mbed-cloud-client\sal-stack-nanostack-eventloop\source):#include "ns_list.h"
+eventOS_event.h (lib\mbed-cloud-client\sal-stack-nanostack-eventloop\nanostack-event-loop):#include "ns_list.h"
+M2mconnectionhandlerpimpl.h (lib\mbed-cloud-client\mbed-client\mbed-client-classic\mbed-client-classic):#include "ns_list.h"
+M2mnsdlinterface.h (lib\mbed-cloud-client\mbed-client\source\include):#include "ns_list.h"
+Nsdllinker.h (lib\mbed-cloud-client\mbed-client\source\include):#include "ns_list.h"
+nsdynmemLIB.c (lib\mbed-cloud-client\nanostack-libservice\source\nsdynmemlib):#include "ns_list.h"
+Ns_list.c (lib\mbed-cloud-client\nanostack-libservice\source\liblist): * All functions can be inlined, and definitions are in ns_list.h.
+Ns_list.c (lib\mbed-cloud-client\nanostack-libservice\source\liblist):#include "ns_list.h"
+Ns_list.h (lib\mbed-cloud-client\nanostack-libservice\mbed-client-libservice): * The ns_list.h file provides a doubly-linked list/queue, providing O(1)
+Ns_nvm_helper.c (lib\mbed-cloud-client\nanostack-libservice\source\nvmhelper):#include "ns_list.h"
+Ns_timeout.c (lib\mbed-cloud-client\sal-stack-nanostack-eventloop\source):#include "ns_list.h"
+Ns_timer.c (lib\mbed-cloud-client\sal-stack-nanostack-eventloop\source):#include "ns_list.h"
+Ns_types.h (lib\mbed-cloud-client\nanostack-libservice\mbed-client-libservice):     * ns_list.h needs to use it in a union. No way to get at it though, without
+Protocol_api.c (edge-core):#include "ns_list.h"
+Pt_api.h (include\pt-client):#include "ns_list.h"
+Pt_service_api.c (pt-client):#include "ns_list.h"
+Rpc.c (edge-rpc):#include "ns_list.h"
+Server.h (edge-core\edge-core):#include "ns_list.h"
+Sn_coap_protocol_internal.h (lib\mbed-cloud-client\mbed-coap\source\include):#include "ns_list.h"
+Sn_grs.c (lib\mbed-cloud-client\mbed-client\mbed-client-c\source):#include "ns_list.h"
+Sn_nsdl_lib.h (lib\mbed-cloud-client\mbed-client\mbed-client-c\nsdl-c):#include "ns_list.h"
+Srv_comm.c (edge-core):#include "ns_list.h"
+System_timer.c (lib\mbed-cloud-client\sal-stack-nanostack-eventloop\source):#include "ns_list.h"
+Websocket_comm.c (common):#include "ns_list.h"
+Websocket_comm.h (common\common):#include "ns_list.h"
+Websocket_serv.c (edge-core):#include "ns_list.h"
+---- ARM_UC_PAL_Linux_Initialize_Yocto_RPi Matches (2 in 1 files) ----
+Arm_uc_pal_linux_yocto_rpi.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):arm_uc_error_t ARM_UC_PAL_Linux_Initialize_Yocto_RPi(ARM_UC_PAAL_UPDATE_SignalEvent_t callback)
+Arm_uc_pal_linux_yocto_rpi.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    .Initialize                 = ARM_UC_PAL_Linux_Initialize_Yocto_RPi,
+---- ARM_UCP_LINUX_YOCTO_RPI Matches (1 in 1 files) ----
+Arm_uc_pal_linux_yocto_rpi.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):const ARM_UC_PAAL_UPDATE ARM_UCP_LINUX_YOCTO_RPI =
+---- ARM_UCP_LINUX_OPENWRT Matches (2 in 2 files) ----
+Arm_uc_pal_linux_openrt.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):const ARM_UC_PAAL_UPDATE ARM_UCP_LINUX_OPENWRT =
+Arm_uc_pal_linux_openwrt.h (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\update-client-pal-linux):extern ARM_UC_PAAL_UPDATE ARM_UCP_LINUX_OPENWRT;
+---- arm_uc_worker_parameters Matches (66 in 6 files) ----
+Arm_uc_pal_linux_generic.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    extern arm_ucp_worker_config_t arm_uc_worker_parameters;
+Arm_uc_pal_linux_generic.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.activate       = &arm_uc_worker_parameters_activate;
+Arm_uc_pal_linux_generic.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.active_details = &arm_uc_worker_parameters_active_details;
+Arm_uc_pal_linux_generic.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.details        = &arm_uc_worker_parameters_details;
+Arm_uc_pal_linux_generic.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.finalize       = &arm_uc_worker_parameters_finalize;
+Arm_uc_pal_linux_generic.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.initialize     = &arm_uc_worker_parameters_initialize;
+Arm_uc_pal_linux_generic.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.installer      = &arm_uc_worker_parameters_installer;
+Arm_uc_pal_linux_generic.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.prepare        = &arm_uc_worker_parameters_prepare;
+Arm_uc_pal_linux_generic.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source)://    arm_uc_worker_parameters.read           = &arm_uc_worker_parameters_read;
+Arm_uc_pal_linux_generic.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source)://    arm_uc_worker_parameters.write          = &arm_uc_worker_parameters_write;
+Arm_uc_pal_linux_implementation.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):arm_ucp_worker_config_t arm_uc_worker_parameters = { 0 };
+Arm_uc_pal_linux_implementation.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):            if (arm_uc_worker_parameters.initialize)
+Arm_uc_pal_linux_implementation.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):                                      arm_uc_worker_parameters.initialize);
+Arm_uc_pal_linux_implementation.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):            if (arm_uc_worker_parameters.prepare)
+Arm_uc_pal_linux_implementation.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):                                      arm_uc_worker_parameters.prepare);
+Arm_uc_pal_linux_implementation.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):                if (arm_uc_worker_parameters.write)
+Arm_uc_pal_linux_implementation.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):                if (arm_uc_worker_parameters.write)
+Arm_uc_pal_linux_implementation.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):            if (arm_uc_worker_parameters.write)
+Arm_uc_pal_linux_implementation.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):                                      arm_uc_worker_parameters.write);
+Arm_uc_pal_linux_implementation.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):        if (arm_uc_worker_parameters.finalize)
+Arm_uc_pal_linux_implementation.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):                                  arm_uc_worker_parameters.finalize);
+Arm_uc_pal_linux_implementation.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):        if (arm_uc_worker_parameters.read)
+Arm_uc_pal_linux_implementation.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):                                  arm_uc_worker_parameters.read);
+Arm_uc_pal_linux_implementation.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):            if (arm_uc_worker_parameters.activate)
+Arm_uc_pal_linux_implementation.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):                                      arm_uc_worker_parameters.activate);
+Arm_uc_pal_linux_implementation.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):        if (arm_uc_worker_parameters.active_details)
+Arm_uc_pal_linux_implementation.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):                                  arm_uc_worker_parameters.active_details);
+Arm_uc_pal_linux_implementation.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):        if (arm_uc_worker_parameters.details)
+Arm_uc_pal_linux_implementation.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):                                  arm_uc_worker_parameters.details);
+Arm_uc_pal_linux_implementation.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):        if (arm_uc_worker_parameters.installer)
+Arm_uc_pal_linux_implementation.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):                                  arm_uc_worker_parameters.installer);
+Arm_uc_pal_linux_implementation_internal.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):        extern arm_ucp_worker_config_t arm_uc_worker_parameters;
+Arm_uc_pal_linux_implementation_internal.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):        if ((parameters == arm_uc_worker_parameters.read) &&
+Arm_uc_pal_linux_implementation_internal.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):        if ((parameters == arm_uc_worker_parameters.details) &&
+Arm_uc_pal_linux_implementation_internal.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):        if ((parameters == arm_uc_worker_parameters.active_details) &&
+Arm_uc_pal_linux_implementation_internal.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):        if ((parameters == arm_uc_worker_parameters.installer) &&
+Arm_uc_pal_linux_openwrt.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    extern arm_ucp_worker_config_t arm_uc_worker_parameters;
+Arm_uc_pal_linux_openwrt.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.activate       = &arm_uc_worker_parameters_activate;
+Arm_uc_pal_linux_openwrt.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.active_details = &arm_uc_worker_parameters_active_details;
+Arm_uc_pal_linux_openwrt.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.details        = NULL;
+Arm_uc_pal_linux_openwrt.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.finalize       = NULL;
+Arm_uc_pal_linux_openwrt.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.initialize     = NULL;
+Arm_uc_pal_linux_openwrt.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.installer      = NULL;
+Arm_uc_pal_linux_openwrt.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.prepare        = NULL;
+Arm_uc_pal_linux_openwrt.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.read           = NULL;
+Arm_uc_pal_linux_openwrt.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.write          = NULL;
+Arm_uc_pal_linux_yocto_generic.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    extern arm_ucp_worker_config_t arm_uc_worker_parameters;
+Arm_uc_pal_linux_yocto_generic.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.activate       = &arm_uc_worker_parameters_activate;
+Arm_uc_pal_linux_yocto_generic.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.active_details = &arm_uc_worker_parameters_active_details;
+Arm_uc_pal_linux_yocto_generic.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.details        = NULL;
+Arm_uc_pal_linux_yocto_generic.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.finalize       = NULL;
+Arm_uc_pal_linux_yocto_generic.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.initialize     = NULL;
+Arm_uc_pal_linux_yocto_generic.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.installer      = NULL;
+Arm_uc_pal_linux_yocto_generic.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.prepare        = NULL;
+Arm_uc_pal_linux_yocto_generic.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.read           = NULL;
+Arm_uc_pal_linux_yocto_generic.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.write          = NULL;
+Arm_uc_pal_linux_yocto_rpi.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    extern arm_ucp_worker_config_t arm_uc_worker_parameters;
+Arm_uc_pal_linux_yocto_rpi.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.activate       = &arm_uc_worker_parameters_activate;
+Arm_uc_pal_linux_yocto_rpi.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.active_details = &arm_uc_worker_parameters_active_details;
+Arm_uc_pal_linux_yocto_rpi.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.details        = NULL;
+Arm_uc_pal_linux_yocto_rpi.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.finalize       = NULL;
+Arm_uc_pal_linux_yocto_rpi.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.initialize     = NULL;
+Arm_uc_pal_linux_yocto_rpi.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.installer      = NULL;
+Arm_uc_pal_linux_yocto_rpi.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.prepare        = NULL;
+Arm_uc_pal_linux_yocto_rpi.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.read           = NULL;
+Arm_uc_pal_linux_yocto_rpi.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    arm_uc_worker_parameters.write          = NULL;
+---- ARM_UC_PAL_Linux_Initialize_Generic Matches (2 in 1 files) ----
+Arm_uc_pal_linux_generic.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):arm_uc_error_t ARM_UC_PAL_Linux_Initialize_Generic(ARM_UC_PAAL_UPDATE_SignalEvent_t callback)
+Arm_uc_pal_linux_generic.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):    .Initialize                 = ARM_UC_PAL_Linux_Initialize_Generic,
+---- ARM_UCP_LINUX_GENERIC Matches (2 in 2 files) ----
+Arm_uc_pal_linux_generic.c (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\source):const ARM_UC_PAAL_UPDATE ARM_UCP_LINUX_GENERIC =
+Arm_uc_pal_linux_generic.h (lib\mbed-cloud-client\update-client-hub\modules\pal-linux\update-client-pal-linux):extern ARM_UC_PAAL_UPDATE ARM_UCP_LINUX_GENERIC;
+---- ARM_UCP_SetPAALUpdate Matches (4 in 3 files) ----
+Arm_uc_paal_update.c (lib\mbed-cloud-client\update-client-hub\modules\paal\source):arm_uc_error_t ARM_UCP_SetPAALUpdate(const ARM_UC_PAAL_UPDATE* implementation)
+Arm_uc_paal_update.c (lib\mbed-cloud-client\update-client-hub\modules\paal\source):    UC_PAAL_TRACE("ARM_UCP_SetPAALUpdate");
+Arm_uc_paal_update.h (lib\mbed-cloud-client\update-client-hub\modules\paal\update-client-paal):arm_uc_error_t ARM_UCP_SetPAALUpdate(const ARM_UC_PAAL_UPDATE* implementation);
+Update_client_hub.c (lib\mbed-cloud-client\update-client-hub\source):    return ARM_UCP_SetPAALUpdate(implementation);
