@@ -204,6 +204,10 @@ endif()
     "${FACTORY_CLIENT_SOURCE_DIR}/fcc-output-info-handler/source/*.c"
     )
 
+message("Fred prints: MBED_CLOUD_CLIENT_UPDATE_STORAGE: ${MBED_CLOUD_CLIENT_UPDATE_STORAGE}")
+
+
+#if (DEFINED MBED_CLOUD_CLIENT_UPDATE_STORAGE)
 if ((${OS_BRAND} MATCHES "Linux"))
     FILE(GLOB UPDATE_SRC
     "${UPDATE_SOURCE_DIR}/source/*.c"
@@ -223,14 +227,28 @@ if ((${OS_BRAND} MATCHES "Linux"))
     "${UPDATE_SOURCE_DIR}/modules/pal-filesystem/source/*.c"
     "${UPDATE_SOURCE_DIR}/modules/pal-flashiap/source/*.c"
     "${UPDATE_SOURCE_DIR}/modules/pal-flashiap/source/*.cpp"
-    "${UPDATE_SOURCE_DIR}/modules/pal-linux/source/*.c"
+    "${UPDATE_SOURCE_DIR}/modules/pal-linux/source/arm_uc_pal_linux_implementation.c"
+    "${UPDATE_SOURCE_DIR}/modules/pal-linux/source/arm_uc_pal_linux_implementation_internal.c"
     )
 endif()
 
-list(APPEND MBED_CLOUD_CLIENT_SRC ${UPDATE_SRC})
+if (("${MBED_CLOUD_CLIENT_UPDATE_STORAGE}" STREQUAL   "ARM_UCP_LINUX_YOCTO_RPI"))
+    list(APPEND ${UPDATE_SRC} "${UPDATE_SOURCE_DIR}/modules/pal-linux/source/arm_uc_pal_linux_yocto_rpi.c")
+elseif (("${MBED_CLOUD_CLIENT_UPDATE_STORAGE}" STREQUAL   "ARM_UCP_LINUX_OPENWRT"))
+	list(APPEND ${UPDATE_SRC} "${UPDATE_SOURCE_DIR}/modules/pal-linux/source/arm_uc_pal_linux_openwrt.c")
+else()
+	list(APPEND ${UPDATE_SRC} "${UPDATE_SOURCE_DIR}/modules/pal-linux/source/arm_uc_pal_linux_generic.c")
+endif()
+
+	list(APPEND MBED_CLOUD_CLIENT_SRC ${UPDATE_SRC})
+#else()
+	#message("We didn't define update support yet! So ignore whole update source code!")
+#endif()
+
+
 message(status "Mbed Cloud Client sources = \n ${MBED_CLOUD_CLIENT_SRC}")
 
 CREATE_LIBRARY(mbedCloudClient "${MBED_CLOUD_CLIENT_SRC}" "")
-add_dependencies(mbedCloudClient mbedtls)
+target_link_libraries(mbedCloudClient mbedtls)
 
 ADDSUBDIRS()
